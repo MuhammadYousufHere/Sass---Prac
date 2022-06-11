@@ -1,0 +1,22 @@
+// shared classes
+%btn {
+  display: inline-block;
+  font-size: 1.09rem;
+  font-weight: 500;
+  border-radius: 3px;
+  position: relative;
+  z-index: 42;
+  margin: 5px 5px 0 0;
+  padding: 7.5px 19px;
+  &:hover {
+    transform: scale(0.99);
+  }
+}
+.btn-primary {
+  @extend %btn;
+  @include set-background(lighten($secondary-color, 15%));
+}
+.btn-secondary {
+  @extend %btn;
+  @include set-background(lighten($primary-color, 15%));
+}
